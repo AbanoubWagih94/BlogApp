@@ -13,8 +13,8 @@
               integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
     </head>
     <body>
+        @include('layouts.nav')
         <div id="wrapper">
-            @include('layouts.nav')
             <div class="container">
                 @yield('content')
             </div>
@@ -23,5 +23,6 @@
         <script src="{{ url('bootstrap/js/jquery-3.3.1.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
         <script src="{{ url('bootstrap/js/bootstrap.min.js') }}"></script>
+        @yield('footer')
     </body>
 </html>

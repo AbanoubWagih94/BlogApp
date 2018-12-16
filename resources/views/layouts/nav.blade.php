@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand text-white" href="#">Blog</a>
+        <div class="navbar-brand">
+            <img src="{{ url('/blog.png') }}" height="40px" >
+            <a class="text-white" href="#">Blog</a>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
             <span class="navbar-toggler-icon"></span>
         </button>

@@ -15,8 +15,15 @@ Route::get('/', function () {
     return view('home');
 });
 
+// Auth
 route::get('/auth/login', 'AuthController@index')->name('loginForm');
 route::get('/auth/register', 'AuthController@register')->name('registerForm');
 route::post('/login', 'AuthController@login')->name('login');
 route::post('/register', 'AuthController@store')->name('register');
 route::get('/logout', 'AuthController@logout')->name('logout');
+
+route::resource('/admin/users', 'AdminUsersController');
+
+Route::get('/admin', function (){
+    return view('admin.index');
+});
