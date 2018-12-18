@@ -8,7 +8,7 @@
         <meta name="description" content="Blog" />
 
         <title>Admin</title>
-        <link rel="icon" type="image/ico" href="{{ url('blog.png') }}"  sizes="96*96"/>
+        <link rel="icon" type="image/ico" href="{{ url('blog.png') }}"  sizes="160*160"/>
         <link rel="stylesheet" href="{{ url('bootstrap/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ url('css/main.css') }}">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -23,7 +23,7 @@
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="nav navbar-nav mr-auto">
@@ -36,9 +36,9 @@
                                     <i class="fa fa-user"></i>
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i>Profile</a>
+                                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
                                     <a class="dropdown-item" href="#"><i class="fa fa-gear"></i> Settings</a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i>Logout</a>
+                                    <a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Logout</a>
                                 </div>
                             </div>
                         </li>
@@ -53,6 +53,7 @@
             </div>
             <div  id="main-panel">
                 <div class="container">
+                    <hr>
                     @yield('content')
                 </div>
             </div>

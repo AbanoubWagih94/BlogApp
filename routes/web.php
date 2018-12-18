@@ -22,6 +22,7 @@ route::post('/login', 'AuthController@login')->name('login');
 route::post('/register', 'AuthController@store')->name('register');
 route::get('/logout', 'AuthController@logout')->name('logout');
 
+// Admin
 route::resource('/admin/users', 'AdminUsersController');
 
 Route::get('/admin', function (){
