@@ -25,10 +25,10 @@
                 <a class="nav-link" data-toggle="collapse" data-target="#listContent1" aria-expanded="true" aria-controls="collapseOne" href="#"><i class="fa fa-users fa-fw"></i> Users <span class="fa fa-angle-left"></span></a>
                 <ul class="collapse" id="listContent1">
                     <li>
-                        <a href="#">All Users</a>
+                        <a href="{{ route('users.index') }}">All Users</a>
                     </li>
                     <li>
-                        <a href="#">Create User</a>
+                        <a href="{{ route('users.create') }}">Create User</a>
                     </li>
                 </ul>
             </li>

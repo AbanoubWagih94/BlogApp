@@ -4,7 +4,7 @@
     <h1>Create Users</h1>
 
     @include('layouts.errors')
-    {!! Form::open(['method' => 'post', 'action' => 'AdminUsersController@store', 'file' => true]) !!}
+    {!! Form::open(['method' => 'post', 'action' => 'AdminUsersController@store', 'files' => true]) !!}
         {{ csrf_field() }}
         <div class="form-group">
             {!! Form::label('name','Name:') !!}
@@ -28,13 +28,13 @@
         </div>
 
         <div class="form-group">
-            {!! Form::label('status','Status:') !!}
-            {!! Form::select('status', [1 => 'Active', 0 => 'Not Active'], 0, ['class'=>'form-control']) !!}
+            {!! Form::label('is_active','Status:') !!}
+            {!! Form::select('is_active', [1 => 'Active', 0 => 'Not Active'], 0, ['class'=>'form-control']) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::label('photo','Profile Picture:') !!}
-            {!! Form::file('photo',  ['class'=>'form-control']) !!}
+            {!! Form::label('photo_id','Profile Picture:') !!}
+            {!! Form::file('photo_id', null, ['class'=>'form-control']) !!}
         </div>
         <div class="form-group">
             {!! Form::submit('Create User', ['class'=>'btn btn-primary']) !!}
