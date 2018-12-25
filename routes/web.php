@@ -23,8 +23,11 @@ route::post('/register', 'AuthController@store')->name('register');
 route::get('/logout', 'AuthController@logout')->name('logout');
 
 // Admin
-route::resource('/admin/users', 'AdminUsersController');
+Route::middleware('admin')->group(function (){
+    route::resource('/admin/users', 'AdminUsersController');
+    route::resource('/admin/posts', 'AdminPostsController');
 
-Route::get('/admin', function (){
-    return view('admin.index');
+    Route::get('/admin', function (){
+        return view('admin.index');
+    });
 });

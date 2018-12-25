@@ -27,7 +27,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="nav navbar-nav mr-auto">
-                        <li class="nav-item"> <a class="nav-link  text-white" href=""><i class="fa fa-home"></i> Home</a></li>
+                        <li class="nav-item"> <a class="nav-link  text-white" href="/"><i class="fa fa-home"></i> Home</a></li>
                     </ul>
                     <ul class="nav navbar-nav">
                         <li class="nav-item ">
@@ -38,7 +38,8 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenu">
                                     <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
                                     <a class="dropdown-item" href="#"><i class="fa fa-gear"></i> Settings</a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Logout</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"><i class="fa fa-sign-out"></i> Logout</a>
                                 </div>
                             </div>
                         </li>

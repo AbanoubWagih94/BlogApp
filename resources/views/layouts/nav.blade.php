@@ -9,7 +9,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item"> <a class="nav-link" href="#"><i class="fa fa-home"></i> Home</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="/"><i class="fa fa-home"></i> Home</a> </li>
             </ul>
             @if(!auth()->check())
                 <ul class="nav navbar-nav">
@@ -25,8 +25,11 @@
                             <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-user"></i> {{ auth()->user()->name }}</button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                                <a class="dropdown-item" href="#"><i class="fa fa-user"></i>Profile</a>
-                                <a class="dropdown-item" href="{{ route('logout') }}"><i class="fa fa-sign-out"></i>Logout</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                                @if(auth()->user()->isAdmin())
+                                    <a class="dropdown-item" href="/admin/"><i class="fa fa-dashboard"></i> Dashboard</a>
+                                @endif
+                                <a class="dropdown-item" href="{{ route('logout') }}"><i class="fa fa-sign-out"></i> Logout</a>
                             </div>
                         </div>
                     </li>

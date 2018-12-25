@@ -8,15 +8,7 @@
                     <h4 class="card-title text-white">Registration</h4>
                 </div>
                 <div class="card-body">
-                        @if($errors->any())
-                            <div class="alert alert-warning">
-                                <ul>
-                                    @foreach($errors->all() as $err)
-                                        <li>{{ $err }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
+                    @include('errors.errors')
                     <form method="post" action="{{ route('register') }}">
                         {{csrf_field()}}
                         <div class="form-group">

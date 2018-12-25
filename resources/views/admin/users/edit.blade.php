@@ -5,11 +5,11 @@
 
     <div class="row">
         <div class="col-sm-3">
-            <img height="300px" src="{{ $user->photo? $user->photo->file: 'http://placehold.it/300*300'}}" alt="" class="img-responsive img-rounded">
+            <img height="300px" src="{{ $user->photo? $user->photo->file: 'http://placehold.it/300*300'}}" alt="" class="img-thumbnail">
         </div>
         
         <div class="col-sm-9">
-            @include('layouts.errors')
+            @include('errors.errors')
             {!! Form::model($user, ['method' => 'PATCH', 'action' => ['AdminUsersController@update', $user->id], 'files' => true]) !!}
             {{ csrf_field() }}
             {{ method_field('patch') }}
@@ -44,8 +44,16 @@
                 {!! Form::file('photo_id', null, ['class'=>'form-control']) !!}
             </div>
             <div class="form-group">
-                {!! Form::submit('Create User', ['class'=>'btn btn-primary']) !!}
+                {!! Form::submit('Update User', ['class'=>'btn btn-primary col-sm-6', 'style' => 'float:left']) !!}
             </div>
+            {!! Form::close() !!}
+
+            {!! Form::open(['method' => 'POST' , 'action' => ['AdminUsersController@destroy', $user->id]]) !!}
+                {{ method_field('DELETE') }}
+                {{ csrf_field() }}
+                <div class="form-group">
+                    {!! Form::submit('Delete User', ['class'=>'btn btn-danger col-sm-6']) !!}
+                </div>
             {!! Form::close() !!}
         </div>
     </div>

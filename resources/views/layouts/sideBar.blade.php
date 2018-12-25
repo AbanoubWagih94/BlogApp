@@ -37,10 +37,10 @@
                 <a class="nav-link" data-toggle="collapse" data-target="#listContent2" aria-expanded="true" aria-controls="collapseOne" href="#"><i class="fa fa-wrench fa-fw"></i> Posts <span class="fa fa-angle-left"></span></a>
                 <ul class="collapse" id="listContent2">
                     <li>
-                        <a href="">All Posts</a>
+                        <a href="{{route('posts.index')}}">All Posts</a>
                     </li>
                     <li>
-                        <a href="">Create Post</a>
+                        <a href="{{route('posts.create')}}">Create Post</a>
                     </li>
                 </ul>
             </li>

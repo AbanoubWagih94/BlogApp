@@ -102,6 +102,7 @@ class AdminUsersController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'role_id' => 'required',
+            'password' => 'required',
             'is_active' => 'required',
         ]);
         $input = $request->all();
@@ -128,6 +129,13 @@ class AdminUsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        if(file_exists(public_path().$user->photo->file)){
+            unlink(public_path().$user->photo->file);
+        }
+        //User::destroy($id);
+        $user->delete();
+        return redirect('admin/users');
     }
 }
