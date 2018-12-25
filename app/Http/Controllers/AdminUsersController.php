@@ -113,7 +113,7 @@ class AdminUsersController extends Controller
             $file->move('images', $name);
 
             $photo = Photo::Create(['file'=>$name]);
-            $input['photo_id'] = $photo;
+            $input['photo_id'] = $photo->id;
         }
         $user = User::find($id);
         $user->update($input);

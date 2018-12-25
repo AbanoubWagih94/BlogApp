@@ -5,7 +5,7 @@
 
     <div class="row">
         <div class="col-sm-3">
-            <img height="300px" src="{{ $user->photo? $user->photo->file: 'http://placehold.it/300*300'}}" alt="" class="img-thumbnail">
+            <img  src="{{ $user->photo? $user->photo->file: 'http://placehold.it/300*300'}}" alt="" class="img-thumbnail">
         </div>
         
         <div class="col-sm-9">

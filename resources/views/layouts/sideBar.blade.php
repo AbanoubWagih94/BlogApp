@@ -50,10 +50,10 @@
                 <a class="nav-link" data-toggle="collapse" data-target="#listContent3" aria-expanded="true" aria-controls="collapseOne" href="#"><i class="fa fa-wrench fa-fw"></i> Categories <span class="fa fa-angle-left"></span> </a>
                 <ul class="collapse" id="listContent3">
                     <li>
-                        <a href="/categories">All Categories</a>
+                        <a href="{{route('categories.index')}}">All Categories</a>
                     </li>
                     <li>
-                        <a href="/categories/create">Create Category</a>
+                        <a href="admin/categories/create">Create Category</a>
                     </li>
                 </ul>
             </li>

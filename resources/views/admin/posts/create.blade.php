@@ -5,7 +5,7 @@
 
     @include('errors.errors')
 
-    {!! Form::open(['method'=>'Post', 'action'=>['AdminPostsController@store'], 'files'=>true]) !!}
+    {!! Form::open(['method'=>'Post', 'route'=>['posts.store'], 'files'=>true]) !!}
 
         {{ csrf_field() }}
         <div class="form-group">
@@ -15,7 +15,8 @@
 
         <div class="form-group">
             {!! Form::label('category_id', 'Category:') !!}
-            {!! Form::select('category_id', array('0'=>'Java Script', '1'=>'Php'), 1, ['class'=>'form-control']) !!}
+            {!! Form::select('category_id', ['' => 'Choose Category'] + $categories, null, ['class'=>'form-control']) !!}
+
         </div>
 
         <div class="form-group">

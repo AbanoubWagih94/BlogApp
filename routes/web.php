@@ -26,7 +26,7 @@ route::get('/logout', 'AuthController@logout')->name('logout');
 Route::middleware('admin')->group(function (){
     route::resource('/admin/users', 'AdminUsersController');
     route::resource('/admin/posts', 'AdminPostsController');
-
+    route::resource('/admin/categories', 'AdminCategoriesController');
     Route::get('/admin', function (){
         return view('admin.index');
     });
