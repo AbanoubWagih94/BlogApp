@@ -46,3 +46,29 @@
 #sidebar ul .nav-item span , #sidebar ul .nav-item li span{
     float:right;
 }
+
+/*Web Site*/
+#wrapper {
+    margin-top: 100px;
+}
+
+#wrapper ul {
+    list-style: none;
+}
+
+#wrapper #comment a{
+    float: right;
+}
+
+#wrapper .disabled {
+    pointer-events:none;
+    opacity:0.6;         
+}
+
+footer{
+    padding: 50px 0 50px 0;
+    color: white;
+    text-align: center;
+}
+
+

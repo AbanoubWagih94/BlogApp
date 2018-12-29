@@ -42,6 +42,9 @@
                     <li>
                         <a href="{{route('posts.create')}}">Create Post</a>
                     </li>
+                    <li>
+                        <a href="{{route('comments.index')}}">All Comments</a>
+                    </li>
                 </ul>
             </li>
 
@@ -62,10 +65,10 @@
                 <a class="nav-link" data-toggle="collapse" data-target="#listContent4" aria-expanded="true" aria-controls="collapseOne" href="#"><i class="fa fa-wrench fa-fw"></i> Media <span class="fa fa-angle-left"></span> </a>
                 <ul class="collapse" id="listContent4">
                     <li>
-                        <a href="/media">All Media</a>
+                        <a href="{{route('media.index')}}">All Media</a>
                     </li>
                     <li>
-                        <a href="">Upload Media</a>
+                        <a href="{{route('media.create')}}">Upload Media</a>
                     </li>
                 </ul>
             </li>

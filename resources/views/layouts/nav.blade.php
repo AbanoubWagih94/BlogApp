@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <div class="navbar-brand">
             <img src="{{ url('/blog.png') }}" height="40px" >
@@ -10,6 +10,9 @@
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item"> <a class="nav-link" href="/"><i class="fa fa-home"></i> Home</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="/">About</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="/">Services</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="/">Contact</a> </li>
             </ul>
             @if(!auth()->check())
                 <ul class="nav navbar-nav">

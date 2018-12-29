@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="{{ url('css/main.css') }}">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
               integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+        @yield('styles')
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

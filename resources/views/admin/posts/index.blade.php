@@ -29,4 +29,10 @@
             @endforeach
         @endif
     </table>
+
+    <ul class="pagination justify-content-center">
+        <li class="page-item {{ $posts->currentPage() == $posts->firstItem()?'disabled':'' }}"><a class="page-link" href="{{ $posts->previousPageUrl() }}">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="">{{ $posts->currentPage() }}</a></li>
+        <li class="page-item {{ $posts->currentPage() == $posts->lastPage()?'disabled':''}}"><a class="page-link" href="{{ $posts->nextPageUrl() }}">Next</a></li>
+    </ul>
 @endsection

@@ -16,9 +16,23 @@
         @include('layouts.nav')
         <div id="wrapper">
             <div class="container">
-                @yield('content')
+                <div class="row">
+                    <div class="col-md-8">
+                        @yield('content')
+                    </div>
+                    <div class="col-md-4">
+                        @include('layouts.rightSide')
+                    </div>
+                </div>
             </div>
         </div>
+
+
+        <footer class="bg-dark">
+            <div class="container">
+                    <p>Copyright &copy; Created by Abanoub &heartsuit;</p>
+            </div>
+        </footer>
 
         <script src="{{ url('bootstrap/js/jquery-3.3.1.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
